@@ -1,0 +1,83 @@
+/* 改变主题色变量 */
+$--color-primary: #42b983;
+$--color-success: #13ce66;
+$--color-warning: #FFBA00;
+$--color-danger: #ff4949;
+$--color-info: #1E1E1E;
+
+$--button-font-weight: 400;
+
+// $--color-text-regular: #1f2d3d;
+
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+
+$--table-border: 1px solid #dfe6ec;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+.table_header {
+    .el-table__header {
+        thead {
+            > tr {
+                > th {
+                    background: #F9FAFB;
+                    //background: #42b983;
+                    //color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+/** 表格颜色*/
+.el-table {
+    .el-table__header-wrapper {
+        @extend .table_header
+    }
+
+    .el-table__fixed-right {
+        .el-table__fixed-header-wrapper {
+            @extend .table_header
+        }
+    }
+
+
+}
+
+/** 菜单展开颜色*/
+.el-submenu {
+    .el-menu-item {
+        background-color: #1f2d3d !important;
+    }
+
+    .el-menu-item:hover {
+        background-color: #001528 !important;
+    }
+
+}
+
+.horizontal-collapse-transition {
+    transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+}
+
+/** 这个是全局的一个标签样式*/
+.page-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 24px;
+    line-height: 50px;
+    height: 50px;
+   border-bottom: 2px solid #dcdfe6;
+
+}
+
+
+@import "~element-ui/packages/theme-chalk/src/index";
+:export {
+    theme: $--color-primary;
+}
